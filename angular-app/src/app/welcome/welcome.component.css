@@ -1,0 +1,18 @@
+/* src/app/welcome/welcome.component.css */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+  .img-fluid {
+    max-width: 30%;
+  }
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}

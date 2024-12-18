@@ -1,0 +1,14 @@
+/* src/app/header/header.component.css */
+#logo {
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#logo:hover {
+  color: #007bff; /* Change the color on hover */
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+.nav-link {
+  cursor: pointer;
+}
