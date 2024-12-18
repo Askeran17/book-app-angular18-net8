@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
+    "build:prod": "ng build --prod",
+    "postinstall": "ng build --prod",
+    "start:prod": "node server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-app": "node dist/angular-app/server/server.mjs",
-    "postinstall": "ng build --configuration production"
+    "serve:ssr:angular-app": "node dist/angular-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {
