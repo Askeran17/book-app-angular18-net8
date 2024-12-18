@@ -1,0 +1,8 @@
+/* src/app/app.component.css */
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}

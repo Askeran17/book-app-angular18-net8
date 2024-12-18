@@ -161,7 +161,7 @@ builder.Services.AddReverseProxy()
 
 var app = builder.Build();
 
-// Initialize the database with default admin user
+// Initialize the database with default admin users
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -174,14 +174,20 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Apply migrations
+using (var scope = app.Services.CreateScope())
 {
-    app.UseDeveloperExceptionPage();
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
 }
 
-app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+{
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
+}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -194,6 +200,9 @@ app.UseAuthorization();
 app.MapReverseProxy();
 
 app.MapControllers();
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls.Add($"http://0.0.0.0:{port}");
 
 app.Run();
 

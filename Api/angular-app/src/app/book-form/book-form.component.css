@@ -1,0 +1,51 @@
+/* src/app/book-form/book-form.component.css */
+.book-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.book-form-container h2 {
+  text-align: center;
+}
+
+.book-form-container .form-group {
+  margin-bottom: 1em;
+}
+
+.book-form-container label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.book-form-container input {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.book-form-container button {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-form-container button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .book-form-container {
+    padding: 0.5em;
+  }
+
+  .book-form-container button {
+    padding: 0.75em;
+  }
+}

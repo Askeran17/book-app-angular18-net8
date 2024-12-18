@@ -1,0 +1,15 @@
+{
+  "name": "angular-app",
+  "description": "An Angular application",
+  "scripts": {
+    "postdeploy": "ng build --configuration production"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

@@ -1,1 +1,1 @@
-web: dotnet Api.dll
+web: dotnet bin/Release/net8.0/Api.dll --urls "http://0.0.0.0:${PORT}"

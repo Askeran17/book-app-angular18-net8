@@ -5,7 +5,6 @@
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.csproj.CoreCompileInputs.cache
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.MvcApplicationPartsAssemblyInfo.cs
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.MvcApplicationPartsAssemblyInfo.cache
-/Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.sourcelink.json
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/appsettings.Development.json
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/appsettings.json
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/Api.staticwebassets.runtime.json
@@ -147,3 +146,16 @@
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.pdb
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.genruntimeconfig.cache
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/ref/Api.dll
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/web.config
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/web.config
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/app.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/Api.deps.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/Api.runtimeconfig.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/app.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/appsettings.Development.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/appsettings.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/Api.deps.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/Api.runtimeconfig.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/app.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/appsettings.Development.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/appsettings.json

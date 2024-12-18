@@ -1,0 +1,20 @@
+# Ignore environment variables
+Api/.env
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+
+# Ignore node_modules for Angular project
+node_modules/
+
+# Ignore Angular build outputs
+dist/

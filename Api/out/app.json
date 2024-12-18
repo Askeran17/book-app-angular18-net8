@@ -1,0 +1,20 @@
+{
+    "name": "MyApp",
+    "description": "A .NET Core API",
+    "scripts": {},
+    "env": {
+      "ASPNETCORE_ENVIRONMENT": "Production"
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "heroku/dotnet"
+      }
+    ]
+  }
