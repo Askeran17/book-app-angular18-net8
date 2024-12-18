@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "qoDQPQ25EqH3uXOg0g8Sk7yJKAxrHxKuoyo7bPlNTsM=",
+  "Source": "Api",
+  "BasePath": "_content/Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Api/wwwroot",
+      "Source": "Api",
+      "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
+      "BasePath": "_content/Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
