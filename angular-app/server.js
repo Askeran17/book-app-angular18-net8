@@ -1,10 +1,14 @@
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const compression = require('compression');
 const http = require('http');
+const dotenv = require('dotenv');
+
+// Load environment variables from .env file
+dotenv.config();
+
 const app = express();
 
 // Middleware
