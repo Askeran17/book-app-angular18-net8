@@ -10,7 +10,8 @@
     "start:prod": "node server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-app": "node dist/angular-app/server/server.mjs"
+    "serve:ssr:angular-app": "node dist/angular-app/server/server.mjs",
+    "postbuild": "cp -r dist/angular-app/* ../Api/wwwroot/"
   },
   "private": true,
   "dependencies": {
