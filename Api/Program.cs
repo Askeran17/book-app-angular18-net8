@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyApp.Data;
 using Npgsql;
+using System.Net;
 using System.Text;
 using Yarp.ReverseProxy.Configuration;
 using DotNetEnv;
@@ -15,7 +16,9 @@ Env.Load("./.env");
 
 // Debug output to verify environment variables
 var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+var aspnetcoreEnvironment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 Console.WriteLine($"DATABASE_URL: {databaseUrl}");
+Console.WriteLine($"ASPNETCORE_ENVIRONMENT: {aspnetcoreEnvironment}");
 Console.WriteLine($"Environment: {builder.Environment.EnvironmentName}");
 
 // Add services to the container.
@@ -153,8 +156,7 @@ builder.Services.AddReverseProxy()
             ClusterId = "angular-cluster",
             Destinations = new Dictionary<string, DestinationConfig>
             {
-                { "angular-destination-4200", new DestinationConfig { Address = "http://localhost:4200" } },
-                { "angular-destination-8080", new DestinationConfig { Address = "http://localhost:8080" } }
+                { "angular-destination", new DestinationConfig { Address = "https://angular-crud-app-12e5aa509f04.herokuapp.com" } }
             }
         }
     });
@@ -190,7 +192,6 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 app.UseRouting();
 app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();

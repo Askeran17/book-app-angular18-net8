@@ -159,3 +159,5 @@
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/app.json
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/appsettings.Development.json
 /Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/out/out/appsettings.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/bin/Debug/net8.0/global.json
+/Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/Debug/net8.0/Api.sourcelink.json
