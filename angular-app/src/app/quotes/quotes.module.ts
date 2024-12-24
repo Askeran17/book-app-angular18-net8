@@ -4,13 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuotesComponent } from './quotes.component';
 
 const routes: Routes = [
-  { path: '', component: QuotesComponent }
+  { path: '', component: QuotesComponent },
+  { path: ':id', component: QuotesComponent }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    QuotesComponent
   ]
 })
 export class QuotesModule { }

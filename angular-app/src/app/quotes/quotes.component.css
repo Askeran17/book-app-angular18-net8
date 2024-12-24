@@ -18,3 +18,14 @@
   margin-top: 0.5rem;
 }
 
+.redigera-btn {
+  margin-right: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .quote-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
