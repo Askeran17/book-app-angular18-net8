@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hdr1UANqVPTAgn780/7ib2eECqJGG0SCaQfiROoiUk4=",
+  "Hash": "KlD07neeO9urNKfIRb1vJvCMd/d2gbqf6m9iXGEXi2w=",
   "Source": "Api",
   "BasePath": "_content/Api",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot/3rdpartylicenses.txt"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/123.60ce457720a1fe73.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/123.8baae552b0b5103e.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/123.60ce457720a1fe73.js",
+      "RelativePath": "browser/123.8baae552b0b5103e.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/123.60ce457720a1fe73.js"
+      "OriginalItemSpec": "wwwroot/browser/123.8baae552b0b5103e.js"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/148.d90183d7c4d149de.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/144.132c92c3851eaeb0.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/148.d90183d7c4d149de.js",
+      "RelativePath": "browser/144.132c92c3851eaeb0.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,15 +128,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/148.d90183d7c4d149de.js"
+      "OriginalItemSpec": "wwwroot/browser/144.132c92c3851eaeb0.js"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/325.8217c53ccd56ee0c.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/325.317e3ae9fd52105a.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/325.8217c53ccd56ee0c.js",
+      "RelativePath": "browser/325.317e3ae9fd52105a.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,7 +147,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/325.8217c53ccd56ee0c.js"
+      "OriginalItemSpec": "wwwroot/browser/325.317e3ae9fd52105a.js"
     },
     {
       "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/3rdpartylicenses.txt",
@@ -169,12 +169,12 @@
       "OriginalItemSpec": "wwwroot/browser/3rdpartylicenses.txt"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/common.58742964a0534547.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/common.750cb0721bbcbfb0.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/common.58742964a0534547.js",
+      "RelativePath": "browser/common.750cb0721bbcbfb0.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,7 +185,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/common.58742964a0534547.js"
+      "OriginalItemSpec": "wwwroot/browser/common.750cb0721bbcbfb0.js"
     },
     {
       "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/fontawesome-webfont.2b13baa7dd4f54c9.eot",
@@ -302,12 +302,12 @@
       "OriginalItemSpec": "wwwroot/browser/index.html"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/main.a3e1a62fc9363c69.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/main.6e7de23cab46c39d.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/main.a3e1a62fc9363c69.js",
+      "RelativePath": "browser/main.6e7de23cab46c39d.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -318,7 +318,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/main.a3e1a62fc9363c69.js"
+      "OriginalItemSpec": "wwwroot/browser/main.6e7de23cab46c39d.js"
     },
     {
       "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/polyfills.ecf70dd1d300a11d.js",
@@ -340,12 +340,12 @@
       "OriginalItemSpec": "wwwroot/browser/polyfills.ecf70dd1d300a11d.js"
     },
     {
-      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/runtime.14698847f4fb77cc.js",
+      "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/runtime.35f0923fb1c815d3.js",
       "SourceId": "Api",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/",
       "BasePath": "_content/Api",
-      "RelativePath": "browser/runtime.14698847f4fb77cc.js",
+      "RelativePath": "browser/runtime.35f0923fb1c815d3.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -356,7 +356,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/browser/runtime.14698847f4fb77cc.js"
+      "OriginalItemSpec": "wwwroot/browser/runtime.35f0923fb1c815d3.js"
     },
     {
       "Identity": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/browser/styles.37c647e3154bc9eb.css",
