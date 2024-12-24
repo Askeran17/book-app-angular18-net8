@@ -11,8 +11,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-app": "node dist/angular-app/server/server.mjs",
-    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .angular/cache",
-    "copy-to-api": "cp -r dist/angular-app/* /Users/mihailataev/Desktop/Site/angular18-net8/Api/wwwroot/"
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .angular/cache"
   },
   "private": true,
   "dependencies": {
@@ -42,9 +41,8 @@
     "@angular/compiler-cli": "^18.2.0",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
-    "@types/node": "^18.19.68",
+    "@types/node": "^18.18.0",
     "jasmine-core": "~5.2.0",
-    "jasmine-spec-reporter": "^7.0.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
