@@ -1,0 +1,62 @@
+.quote-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.quote-list-container h2 {
+  text-align: center;
+}
+
+.quote-list-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quote-list-container li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5em 1em; /* Добавим отступы слева и справа */
+  border-bottom: 1px solid #ccc;
+}
+
+.quote-text {
+  font-size: 0.9em; /* Уменьшенный размер текста для цитаты */
+  margin-bottom: 0.5em; /* Добавим отступ снизу */
+  font-style: italic; /* Сделаем текст курсивом */
+}
+
+.quote-author {
+  font-size: 0.8em; /* Уменьшенный размер текста для автора */
+  color: #6c757d; /* Серый цвет для автора */
+  margin-top: 0.5em; /* Добавим отступ сверху */
+}
+
+.quote-list-text {
+  margin-left: 6px;
+}
+
+.quote-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.redigera-btn {
+  margin-right: 0.5em;
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .quote-list-container li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quote-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

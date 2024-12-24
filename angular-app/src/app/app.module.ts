@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AuthInterceptor } from './auth.interceptor';
-import { QuoteService } from './quote.service';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -15,8 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    QuoteService
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ]
 })
 export class AppModule { }

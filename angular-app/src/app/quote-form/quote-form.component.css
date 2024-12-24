@@ -1,0 +1,50 @@
+.quote-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quote-form-container h2 {
+  text-align: center;
+}
+
+.quote-form-container .form-group {
+  margin-bottom: 1em;
+}
+
+.quote-form-container label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.quote-form-container input {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.quote-form-container button {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quote-form-container button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .quote-form-container {
+    padding: 0.5em;
+  }
+
+  .quote-form-container button {
+    padding: 0.75em;
+  }
+}
