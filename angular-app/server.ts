@@ -6,6 +6,7 @@ import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import * as dotenv from 'dotenv';
+import * as http from 'http';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -14,8 +15,8 @@ dotenv.config();
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
+  const browserDistFolder = resolve(serverDistFolder, 'dist/angular-app');
+  const indexHtml = join(browserDistFolder, 'index.html');
 
   const commonEngine = new CommonEngine();
 
@@ -66,7 +67,8 @@ function run(): void {
 
   // Start up the Node server
   const server = app();
-  server.listen(port, () => {
+  const httpServer = http.createServer(server);
+  httpServer.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
     console.log(`API_URL: ${process.env['API_URL']}`);
   });
