@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(compression());
 
 // Serve static files from the Angular app
-app.use(express.static(path.join(__dirname, 'dist/angular-app')));
+app.use(express.static(path.join(__dirname, 'dist/angular-app/browser')));
 
 // Proxy API requests to .NET Core server
 app.use('/api', createProxyMiddleware({
@@ -31,7 +31,7 @@ app.use('/api', createProxyMiddleware({
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/angular-app/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/angular-app/browser/index.html'));
 });
 
 // Start the app by listening on the default port
