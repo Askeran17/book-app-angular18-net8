@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241224015342_quitesupd")]
-    partial class quitesupd
+    [Migration("20241224132942_QuotesUpdateV2")]
+    partial class QuotesUpdateV2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

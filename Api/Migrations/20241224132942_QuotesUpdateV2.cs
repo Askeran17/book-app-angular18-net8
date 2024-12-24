@@ -5,7 +5,7 @@
 namespace Api.Migrations
 {
     /// <inheritdoc />
-    public partial class quitesupd : Migration
+    public partial class QuotesUpdateV2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

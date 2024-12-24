@@ -18,20 +18,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.5em 1em; /* Добавим отступы слева и справа */
+  padding: 0.5em 1em;
   border-bottom: 1px solid #ccc;
 }
 
 .quote-text {
-  font-size: 0.9em; /* Уменьшенный размер текста для цитаты */
-  margin-bottom: 0.5em; /* Добавим отступ снизу */
-  font-style: italic; /* Сделаем текст курсивом */
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  font-style: italic;
 }
 
 .quote-author {
-  font-size: 0.8em; /* Уменьшенный размер текста для автора */
-  color: #6c757d; /* Серый цвет для автора */
-  margin-top: 0.5em; /* Добавим отступ сверху */
+  font-size: 0.8em; 
+  color: #6c757d;
+  margin-top: 0.5em;
 }
 
 .quote-list-text {
