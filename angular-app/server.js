@@ -29,7 +29,7 @@ app.use('/api', createProxyMiddleware({
   }
 }));
 
-// Catch all other routes and return the index file
+// Catch all other routes and return the index files
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/angular-app/index.html'));
 });
