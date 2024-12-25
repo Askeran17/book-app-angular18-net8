@@ -86,7 +86,7 @@ __Theme__
 
 HTML, CSS, JavaScript, Typescript, C#
 
-### Languages Used
+### Frameworks Used
 
 Angular, ASP.NET.Core, .NET Core 8
 
