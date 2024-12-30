@@ -100,4 +100,8 @@ Angular, ASP.NET.Core, .NET Core 8
 
 ## Testing
 
-I did manual testing, all of the features, buttons etc works well.
+- I did manual testing, all of the features, buttons etc works well.
+
+## Deployment
+
+- Project was deployed on Heroku.
