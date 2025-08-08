@@ -1,26 +1,31 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
-const { createProxyMiddleware } = require('http-proxy-middleware');
 const compression = require('compression');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const http = require('http');
 const dotenv = require('dotenv');
 
-// Load environment variables from .env file
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 8080;
+const API_URL = process.env.API_URL || 'https://net8-api-d3f72ab7e8a4.herokuapp.com';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
-// Middleware
-app.use(bodyParser.json());
+if (!process.env.API_URL) {
+  console.warn('⚠️  API_URL is not defined in .env');
+}
+
+app.use(express.json());
 app.use(compression());
 
-// Serve static files from the Angular app
-app.use(express.static(path.join(__dirname, 'dist/angular-app/browser')));
+app.use((req, res, next) => {
+  console.log(`[${req.method}] ${req.url}`);
+  next();
+});
 
-// Proxy API requests to .NET Core server
 app.use('/api', createProxyMiddleware({
-  target: process.env.API_URL || 'https://net8-api-d3f72ab7e8a4.herokuapp.com',
+  target: API_URL,
   changeOrigin: true,
   logLevel: 'debug',
   onError: (err, req, res) => {
@@ -29,17 +34,15 @@ app.use('/api', createProxyMiddleware({
   }
 }));
 
-// Catch all other routes and return the index file
+app.use(express.static(path.join(__dirname, 'dist/angular-app/browser')));
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/angular-app/browser/index.html'));
 });
 
-// Start the app by listening on the default port
-const PORT = process.env.PORT || 8080;
-const server = http.createServer(app);
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV}`);
-  console.log(`ASPNETCORE_ENVIRONMENT: ${process.env.ASPNETCORE_ENVIRONMENT}`);
-  console.log(`API_URL: ${process.env.API_URL}`);
+http.createServer(app).listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+  console.log(`🌍 Environment: ${NODE_ENV}`);
+  console.log(`🔗 API_URL: ${API_URL}`);
 });
+
