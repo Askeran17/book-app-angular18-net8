@@ -81,7 +81,7 @@ if (string.IsNullOrEmpty(databaseUrl))
 
 var connString = new NpgsqlConnectionStringBuilder();
 
-if (databaseUrl.StartsWith("postgres://"))
+if (databaseUrl.StartsWith("postgres://") || databaseUrl.StartsWith("postgresql://"))
 {
     // Parse URL format
     var databaseUri = new Uri(databaseUrl);
