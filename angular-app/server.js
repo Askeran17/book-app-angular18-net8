@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const API_URL = process.env.API_URL || 'https://net8-api-d3f72ab7e8a4.herokuapp.com';
+const API_URL = process.env.API_URL || 'https://book-app-angular18-net8.onrender.com';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 if (!process.env.API_URL) {

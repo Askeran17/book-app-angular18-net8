@@ -1,0 +1,55 @@
+# Node modules and build artifacts
+angular-app/node_modules
+angular-app/dist
+angular-app/.angular
+angular-app/coverage
+
+# .NET build artifacts
+Api/bin
+Api/obj
+Api/publish
+**/bin
+**/obj
+
+# IDE and editor files
+.vscode
+.vs
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (will be set via Render)
+.env
+.env.local
+.env.*.local
+**/.env
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Documentation and images
+README.md
+README.MD
+images-readme
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+
+# Testing
+coverage
+*.spec.ts
+**/*.spec.ts
+
+# Misc
+.editorconfig

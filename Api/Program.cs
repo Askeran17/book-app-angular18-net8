@@ -28,7 +28,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:4200", "http://localhost:8080", "https://angular-book-app.onrender.com", "https://angular-book-app-eeb487910d5c.herokuapp.com")
+            builder.WithOrigins("http://localhost:4200", "http://localhost:8080", "https://book-app-angular18-net8.onrender.com")
                    .AllowAnyMethod()
                    .AllowAnyHeader()
                    .AllowCredentials();

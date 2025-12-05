@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://net8-api-d3f72ab7e8a4.herokuapp.com",
+    "target": "https://book-app-angular18-net8.onrender.com",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"

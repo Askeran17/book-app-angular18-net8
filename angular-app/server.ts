@@ -32,7 +32,7 @@ export function app(): express.Express {
 
   // Proxy API requests to .NET Core server
   server.use('/api', createProxyMiddleware({
-    target: process.env['API_URL'] || 'https://net8-api-d3f72ab7e8a4.herokuapp.com',
+    target: process.env['API_URL'] || 'https://book-app-angular18-net8.onrender.com',
     changeOrigin: true,
   }));
 

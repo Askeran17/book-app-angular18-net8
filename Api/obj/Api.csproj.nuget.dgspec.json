@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mihailataev/Desktop/Site/angular18-net8/Api/Api.csproj": {}
+    "/Users/mikhailatayev/Programmering/Mina projekt/book-app-angular18-net8/Api/Api.csproj": {}
   },
   "projects": {
-    "/Users/mihailataev/Desktop/Site/angular18-net8/Api/Api.csproj": {
+    "/Users/mikhailatayev/Programmering/Mina projekt/book-app-angular18-net8/Api/Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/Api.csproj",
+        "projectUniqueName": "/Users/mikhailatayev/Programmering/Mina projekt/book-app-angular18-net8/Api/Api.csproj",
         "projectName": "Api",
-        "projectPath": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/Api.csproj",
-        "packagesPath": "/Users/mihailataev/.nuget/packages/",
-        "outputPath": "/Users/mihailataev/Desktop/Site/angular18-net8/Api/obj/",
+        "projectPath": "/Users/mikhailatayev/Programmering/Mina projekt/book-app-angular18-net8/Api/Api.csproj",
+        "packagesPath": "/Users/mikhailatayev/.nuget/packages/",
+        "outputPath": "/Users/mikhailatayev/Programmering/Mina projekt/book-app-angular18-net8/Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mihailataev/.nuget/NuGet/NuGet.Config"
+          "/Users/mikhailatayev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -97,6 +98,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -105,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
