@@ -3,7 +3,7 @@
 
 ### Live Site
 
-- Go to live site - [BookApp](https://net8-api-d3f72ab7e8a4.herokuapp.com/)
+- Go to live site - [BookApp](https://book-app-angular18-net8.onrender.com/)
 
 ### Repository
 
@@ -16,7 +16,7 @@
 This project is a web application built with Angular and .NET Core, designed for managing quotes and books. The frontend is developed using Angular, leveraging modules, components, and services to provide a user-friendly interface. The backend, built with .NET Core, includes an API that handles CRUD operations for quotes and books, supported by JWT authentication for secure access. The application integrates a PostgreSQL database to store data persistently. Additionally, it uses YARP for reverse proxy configuration to route requests appropriately between the frontend and backend. I used both swedish and english languages for this app.
 
 ### Database
-The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
+The project uses the relational database PostgreSQL to store the data. I used PostgreSQL.
 
 ## Features
 
