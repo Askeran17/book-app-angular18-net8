@@ -172,9 +172,13 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 
 app.UseHttpsRedirection();
 
-// Serve static files from wwwroot
-app.UseDefaultFiles();
-app.UseStaticFiles();
+// Serve static files from wwwroot/browser
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "browser")),
+    RequestPath = ""
+});
 
 app.UseRouting();
 app.UseCors("AllowSpecificOrigin");
@@ -184,7 +188,11 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Fallback to index.html for Angular routing (SPA)
-app.MapFallbackToFile("browser/index.html");
+app.MapFallback(async context =>
+{
+    context.Response.ContentType = "text/html";
+    await context.Response.SendFileAsync(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "browser", "index.html"));
+});
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Add($"http://0.0.0.0:{port}");
