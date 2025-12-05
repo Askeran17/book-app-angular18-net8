@@ -6,7 +6,6 @@ using MyApp.Data;
 using Npgsql;
 using System.Net;
 using System.Text;
-using Yarp.ReverseProxy.Configuration;
 using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,17 +35,19 @@ builder.Services.AddCors(options =>
 });
 
 // Configure JWT authentication
-var jwtSettings = builder.Configuration.GetSection("Jwt");
-var jwtKey = jwtSettings["Key"];
+var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY") ?? builder.Configuration["Jwt:Key"];
+var jwtIssuer = Environment.GetEnvironmentVariable("JWT_ISSUER") ?? builder.Configuration["Jwt:Issuer"];
+var jwtAudience = Environment.GetEnvironmentVariable("JWT_AUDIENCE") ?? builder.Configuration["Jwt:Audience"];
+
 if (string.IsNullOrEmpty(jwtKey))
 {
-    throw new ArgumentNullException("Jwt:Key", "JWT Key is not configured.");
+    throw new ArgumentNullException("JWT_KEY", "JWT Key is not configured.");
 }
 
 var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 if (keyBytes.Length < 16) // Ensure the key is at least 128 bits (16 bytes)
 {
-    throw new ArgumentException("Jwt:Key must be at least 128 bits (16 bytes) long.");
+    throw new ArgumentException("JWT_KEY must be at least 128 bits (16 bytes) long.");
 }
 
 builder.Services.AddAuthentication(options =>
@@ -56,17 +57,14 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    var issuer = jwtSettings["Issuer"];
-    var audience = jwtSettings["Audience"];
-
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = issuer,
-        ValidAudience = audience,
+        ValidIssuer = jwtIssuer,
+        ValidAudience = jwtAudience,
         IssuerSigningKey = new SymmetricSecurityKey(keyBytes)
     };
 });
@@ -135,31 +133,12 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });
 
-// Add YARP reverse proxy
-builder.Services.AddReverseProxy()
-    .LoadFromMemory(new[]
-    {
-        new RouteConfig
-        {
-            RouteId = "angular",
-            ClusterId = "angular-cluster",
-            Match = new RouteMatch
-            {
-                Path = "{**catch-all}"
-            }
-        }
-    },
-    new[]
-    {
-        new ClusterConfig
-        {
-            ClusterId = "angular-cluster",
-            Destinations = new Dictionary<string, DestinationConfig>
-            {
-                { "angular-destination", new DestinationConfig { Address = "https://angular-crud-app-12e5aa509f04.herokuapp.com" } }
-            }
-        }
-    });
+// Configure static files for Angular app (Docker deployment)
+var isDockerDeployment = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RENDER"));
+if (isDockerDeployment)
+{
+    Console.WriteLine("Running in Docker/Render mode - serving static files");
+}
 
 var app = builder.Build();
 
@@ -192,15 +171,20 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 }
 
 app.UseHttpsRedirection();
+
+// Serve static files from wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.UseRouting();
 app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Use YARP reverse proxy
-app.MapReverseProxy();
-
 app.MapControllers();
+
+// Fallback to index.html for Angular routing (SPA)
+app.MapFallbackToFile("browser/index.html");
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Add($"http://0.0.0.0:{port}");
