@@ -1,5 +1,5 @@
 <h1 align="center"> BookApp - Create, Read, Update and Delete items</h1>
-<img src="./images-readme/adaptability-size.png" alt="BookApp on a variety of screen sizes" />
+<img src="./images-readme/adaptive.png" alt="BookApp on a variety of screen sizes" />
 
 ### Live Site
 
@@ -13,7 +13,8 @@
 
 ## Overview
 
-This project is a web application built with Angular and .NET Core, designed for managing quotes and books. The frontend is developed using Angular, leveraging modules, components, and services to provide a user-friendly interface. The backend, built with .NET Core, includes an API that handles CRUD operations for quotes and books, supported by JWT authentication for secure access. The application integrates a PostgreSQL database to store data persistently. Additionally, it uses YARP for reverse proxy configuration to route requests appropriately between the frontend and backend. I used both swedish and english languages for this app.
+This project is a web application built with Angular and .NET Core, designed for managing quotes and books. The frontend is developed using Angular, leveraging modules, components, and services to provide a user-friendly interface. The backend, built with .NET Core, includes an API that handles CRUD operations for quotes and books, supported by JWT authentication for secure access. The application integrates a PostgreSQL database to store data persistently.
+
 
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL.
@@ -79,8 +80,8 @@ __Theme__
 - Users can also change between white and black theme, to switch from one to another, just click on switch button (växla till mörk/ljus design)
 
 ![Switch Button](/images-readme/switch-button.png)
-![White Theme](/images-readme/white-theme.png)
-![Black Theme](/images-readme/black-theme.png)
+![White Theme](/images-readme/switch-white.png)
+![Black Theme](/images-readme/switch-black.png)
 
 ### Languages Used
 
@@ -104,4 +105,4 @@ Angular, ASP.NET.Core, .NET Core 8
 
 ## Deployment
 
-- Project was deployed on Heroku.
+- Project was deployed on Render.
