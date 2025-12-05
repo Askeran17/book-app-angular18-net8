@@ -8,14 +8,11 @@ WORKDIR /app/angular-app
 # Copy Angular package files
 COPY angular-app/package*.json ./
 
-# Install dependencies
-RUN npm ci
-
-# Copy Angular source code
+# Copy Angular source code (needed before npm ci due to postinstall script)
 COPY angular-app/ ./
 
-# Build Angular application for production
-RUN npm run build:prod
+# Install dependencies (this will trigger postinstall which builds the app)
+RUN npm ci --omit=dev
 
 # Stage 2: Build .NET backend
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS dotnet-build
